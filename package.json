@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lucasvor25/Projeto-nodejs-api-com-express-e-mysql/issues"
   },
-  "homepage": "https://github.com/lucasvor25/Projeto-nodejs-api-com-express-e-mysql/tree/main#readme"
+  "homepage": "https://github.com/lucasvor25/Projeto-nodejs-api-com-express-e-mysql/tree/main#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
