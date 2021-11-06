@@ -1,0 +1,19 @@
+{
+  "name": "projeto-nodejs-express",
+  "version": "1.0.0",
+  "description": "nodejs com express e mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasvor25/Projeto-nodejs-api-com-express-e-mysql.git#main"
+  },
+  "author": "Lucas Vinicius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasvor25/Projeto-nodejs-api-com-express-e-mysql/issues"
+  },
+  "homepage": "https://github.com/lucasvor25/Projeto-nodejs-api-com-express-e-mysql/tree/main#readme"
+}
