@@ -1,4 +1,5 @@
-const moment = require('moment')
+const moment = require('moment');
+const { off } = require('../infraestrutura/conexao');
 const conexao = require('../infraestrutura/conexao')
 
 
@@ -63,6 +64,33 @@ class Atendimento {
         res.status(200).json(atendimento)
     }
     })
+    }
+    altera(id, valores, res){
+        if(valores.data){
+            valores.data = moment(valores.data, 'DD/MM/YYYY').format('YYYY-MM-DD HH:MM:SS')
+        }
+        const sql = 'UPDATE Atendimentos SET ? WHERE id=?'
+
+        conexao.query(sql, [valores,id], (erro,resultados)=>{
+            if(erro){
+                ers.status(400).json(erro)
+            }else{
+                res.status(200).json(resultados)
+            }
+        })
+    }
+    deleta(id, res){
+        const sql  = 'DELETE FROM Atendimentos WHERE id=?'
+        
+        conexao.query(sql, id, (erro, resultados)=>{
+            if(erro){
+                res.status(400).json(erro)
+            }else{
+                res.status(200).json({id})
+            }
+        })
+       
+
     }
 }
 
