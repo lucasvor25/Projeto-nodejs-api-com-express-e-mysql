@@ -91,7 +91,7 @@ class Atendimento {
         })
        
 
-    }
+    } 
 }
 
 

@@ -1,9 +1,5 @@
 const fs = require('fs')
 
-fs.readFile('./arquivos/cao.jpg',(erro, buffer) =>{
-    console.log('Imagem deu certo')
-
-    fs.writeFile('./arquivos/cao2.jpg', buffer, (erro)=>{
-        console.log('imagem foi escrita')
-    })
-})
+fs.createReadStream('./arquivos/cao.jpg')
+.pipe(fs.createWriteStream('./arquivos/cao-stream.jpg'))
+.on('finish', () => console.log("Cao imagem escrito com sucesso"))
